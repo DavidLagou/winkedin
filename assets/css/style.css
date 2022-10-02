@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   z-index: 997;
   transition: all 0.5s;
   padding: 15px 0;
-  background: #133329;
+  background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #ffffff;
+  color: #4e4039;
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 15px;
@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 .nav-menu .get-started a {
-  background: #133329;
+  background: #F4BF90;
   color: #fff;
   border-radius: 50px;
   margin: 0 15px;
@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 .nav-menu .get-started a:hover {
-  background: #133329;
+  background: #DC7275;
   color: #fff;
 }
 
@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   opacity: 0;
   visibility: hidden;
   padding: 10px 0;
-  background: #133329;
+  background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: ease all 0.3s;
 }
@@ -338,8 +338,11 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  /* width: 100%; */
+  width: 100%;
+  height: 80vh;
+  background: #fae5e3;
   border-bottom: 2px solid #fcebe3;
+  margin: 72px 0 -72px 0;
 }
 
 #hero h1 {
@@ -378,6 +381,27 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 991px) {
+  #hero {
+    height: calc(100vh - 72px);
+  }
+  #hero .animated {
+    -webkit-animation: none;
+    animation: none;
+  }
+  #hero .hero-img {
+    text-align: center;
+  }
+  #hero .hero-img img {
+    width: 30%;
+  }
+}
 
 @media (max-width: 768px) {
   #hero h1 {
@@ -389,7 +413,9 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     line-height: 24px;
     margin-bottom: 30px;
   }
-
+  #hero .hero-img img {
+    width: 40%;
+  }
 }
 
 @media (max-width: 575px) {
